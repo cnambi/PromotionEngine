@@ -20,24 +20,20 @@ namespace PromotionEngine
             {
                 if (offersCount >= 2)
                     break;
-
-                if(offer.PromotionalOffer.Count == 1)
+                if (IsOfferEligible(offer.PromotionalOffer, orders))
                 {
-                    var billAmount = CalculateSinglePromotion(skus, offer, orders);
-                    totalBill += billAmount;
-                    offersCount++;
-                }
-                else
-                {
-                    // The below while condition can be used if the same offer can apply multiple times
-                   // while (IsOfferEligible(offer.PromotionalOffer, orders))
-                    //{
+                    if (offer.PromotionalOffer.Count == 1)
+                    {
+                        var billAmount = CalculateSinglePromotion(skus, offer, orders);
+                        totalBill += billAmount;
+                        offersCount++;
+                    }
+                    else
+                    {
                         var billAmount = CalculateMultiplePromotion(skus, offer, orders);
                         totalBill += billAmount;
                         offersCount++;
-                        //if (offersCount >= 2)
-                          //  break;
-                    //}
+                    }
                 }
             }
             foreach (var order in orders)
