@@ -29,14 +29,15 @@ namespace PromotionEngine
                 }
                 else
                 {
-                    while (IsOfferEligible(offer.PromotionalOffer, orders))
-                    {
+                    // The below while condition can be used if the same offer can apply multiple times
+                   // while (IsOfferEligible(offer.PromotionalOffer, orders))
+                    //{
                         var billAmount = CalculateMultiplePromotion(skus, offer, orders);
                         totalBill += billAmount;
                         offersCount++;
-                        if (offersCount >= 2)
-                            break;
-                    }
+                        //if (offersCount >= 2)
+                          //  break;
+                    //}
                 }
             }
             foreach (var order in orders)
@@ -58,7 +59,6 @@ namespace PromotionEngine
             decimal billAmount = 0;
             KeyValuePair<int,int> offer = promotion.PromotionalOffer.FirstOrDefault();
             OrderModel order = orders.Where(x => x.SID == offer.Key).FirstOrDefault();
-            //if(orders.Where(x => x.SID == item.Key) == null || (orders.Where(x => x.SID == item.Key) != null && order.Qty < item.Value))
             if (orders.Where(x => x.SID == offer.Key) != null && order.Qty >= offer.Value)
             {
                 var count = order.Qty / offer.Value;
