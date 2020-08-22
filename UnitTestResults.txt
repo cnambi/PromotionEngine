@@ -1,0 +1,142 @@
+First test scenarion with only one order 
+----------------------------------------------
+Enter Sku ID: 1
+Enter Sku Name: A
+Enter Sku Price: 50
+Do you want to add another Sku (y/n): Y
+Enter Sku ID: 2
+Enter Sku Name: B
+Enter Sku Price: 30
+Do you want to add another Sku (y/n): Y
+Enter Sku ID: 3
+Enter Sku Name: C
+Enter Sku Price: 20
+Do you want to add another Sku (y/n): Y
+Enter Sku ID: 4
+Enter Sku Name: D
+Enter Sku Price: 15
+Do you want to add another Sku (y/n): N
+Do you want to add Promotional Offers (y/n): Y
+Enter Promotion Id: 11
+Enter Sku Id: 1
+Enter Sku Qty: 3
+Do you want to add another Sku for this promotion(y/n): N
+Enter Promotion price: 130
+Do you want to add another Promotion (y/n): Y
+Enter Promotion Id: 12
+Enter Sku Id: 2
+Enter Sku Qty: 2
+Do you want to add another Sku for this promotion(y/n): N
+Enter Promotion price: 45
+Do you want to add another Promotion (y/n): Y
+Enter Promotion Id: 13
+Enter Sku Id: 3
+Enter Sku Qty: 1
+Do you want to add another Sku for this promotion(y/n): Y
+Enter Sku Id: 4
+Enter Sku Qty: 1
+Do you want to add another Sku for this promotion(y/n): N
+Enter Promotion price: 30
+Do you want to add another Promotion (y/n): N
+Enter Order Id: 111
+Enter Sku Id: 1
+Enter Quantity: 3
+Do you want to add another Sku to your order (y/n): Y
+Enter Order Id: 112
+Enter Sku Id: 2
+Enter Quantity: 5
+Do you want to add another Sku to your order (y/n): Y
+Enter Order Id: 113
+Enter Sku Id: 4
+Enter Quantity: 1
+Do you want to add another Sku to your order (y/n): N
+************** Order detail ***************
+Sku name: A Order Qty (1 * 3) offer applied* : 130
+Sku name: B Order Qty (2 * 2) offer applied* : 90
+Sku name: B Order Qty (1): 30
+Sku name: D Order Qty (1): 15
+------------------------
+Total bill : 265
+
+
+Second Test scenario with multiple orders
+--------------------------------------------------------------
+
+Enter Sku ID: 1
+Enter Sku Name: A
+Enter Sku Price: 50
+Do you want to add another Sku (y/n): Y
+Enter Sku ID: 2
+Enter Sku Name: B
+Enter Sku Price: 30
+Do you want to add another Sku (y/n): Y
+Enter Sku ID: 3
+Enter Sku Name: C
+Enter Sku Price: 20
+Do you want to add another Sku (y/n): N
+Do you want to add Promotional Offers (y/n): Y
+Enter Promotion Id: 11
+Enter Sku Id: 1
+Enter Sku Qty: 1
+Do you want to add another Sku for this promotion(y/n): Y
+Enter Sku Id: 2
+Enter Sku Qty: 1
+Do you want to add another Sku for this promotion(y/n): N
+Enter Promotion price: 60
+Do you want to add another Promotion (y/n): Y
+Enter Promotion Id: 12
+Enter Sku Id: 2
+Enter Sku Qty: 2
+Do you want to add another Sku for this promotion(y/n): Y
+Enter Sku Id: 3
+Enter Sku Qty: 2
+Do you want to add another Sku for this promotion(y/n): N
+Enter Promotion price: 40
+Do you want to add another Promotion (y/n): Y
+Enter Promotion Id: 13
+Enter Sku Id: 1
+Enter Sku Qty: 1
+Do you want to add another Sku for this promotion(y/n): Y
+Enter Sku Id: 3
+Enter Sku Qty: 1
+Do you want to add another Sku for this promotion(y/n): N
+Enter Promotion price: 60
+Do you want to add another Promotion (y/n): N
+Create your new Order
+Enter Sku Id: 1
+Enter Quantity: 2
+Do you want to add another Sku to your order (y/n): Y
+Enter Sku Id: 2
+Enter Quantity: 2
+Do you want to add another Sku to your order (y/n): Y
+Enter Sku Id: 3
+Enter Quantity: 1
+Do you want to add another Sku to your order (y/n): N
+************** Order detail ***************
+Sku names: (1A + 1B) Order Qty (1) offer applied* : 60
+Sku names: (1A + 1C) Order Qty (1) offer applied* : 60
+Sku name: B Order Qty (1): 30
+------------------------
+Total bill : 150
+
+Do you want to create another order (y/n): Y
+Create your new Order
+Enter Sku Id: 1
+Enter Quantity: 2
+Do you want to add another Sku to your order (y/n): Y
+Enter Sku Id: 2
+Enter Quantity: 3
+Do you want to add another Sku to your order (y/n): Y
+Enter Sku Id: 3
+Enter Quantity: 3
+Do you want to add another Sku to your order (y/n): N
+************** Order detail ***************
+Sku names: (1A + 1B) Order Qty (1) offer applied* : 60
+Sku names: (2B + 2C) Order Qty (1) offer applied* : 40
+Sku name: A Order Qty (1): 50
+Sku name: C Order Qty (1): 20
+------------------------
+Total bill : 170
+
+
+
